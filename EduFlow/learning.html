@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Apprentissage sur EduFlow, plateforme d’apprentissage.">
+        <title>Apprentissage — EduFlow</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/learning.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <script src="js/data.js" defer>
+        </script>
+        <script src="js/storage.js" defer>
+        </script>
+        <script src="js/ui.js" defer>
+        </script>
+        <script src="js/main.js" defer>
+        </script>
+        <script src="js/learning.js" defer>
+        </script>
+    </head>
+    <body>
+        <a class="skip-link" href="#contenu-principal">Aller au contenu principal</a>
+        <header class="site-header">
+            <a href="index.html" class="site-logo" aria-label="EduFlow — Accueil">
+                <img src="assets/icons/logo.png" alt="EduFlow" width="180" height="60">
+            </a>
+            <nav class="main-nav" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li>
+                        <a href="index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="courses.html" class="nav-section-active">Cours</a>
+                    </li>
+                </ul>
+            </nav>
+            <form class="header-search" role="search" action="courses.html" method="get">
+                <label for="course-search" class="visually-hidden">Rechercher un cours</label>
+                <input type="search" id="course-search" name="q" placeholder="Rechercher un cours, une leçon...">
+                <button type="submit">Rechercher</button>
+            </form>
+            <div class="header-actions">
+                <button type="button" class="notification-button" aria-label="Consulter les notifications">
+                    <span aria-hidden="true">🔔</span>
+                </button>
+                <a href="dashboard.html" class="profile-link" aria-label="Mon tableau de bord">
+                    <span aria-hidden="true">A</span>
+                </a>
+            </div>
+        </header>
+        <main id="contenu-principal" class="app-container">
+            <nav aria-label="Fil d’Ariane">
+                <a href="courses.html">Cours</a> / <a id="details-link" href="course-details.html">Détails du cours</a> / Apprentissage</nav>
+            <p id="feedback" class="app-status" role="status">
+            </p>
+            <div class="learning-layout">
+                <aside class="app-panel syllabus">
+                     <h2 id="course-name">Programme du cours</h2>
+                   
+                    <div id="modules">
+                    </div>
+                </aside>
+                <article class="app-panel lesson-content">
+                    <p id="module-name" class="course-category">
+                    </p>
+                    <h1 id="lesson-title">Votre leçon</h1>
+                    <div id="lesson-body">
+                    </div>
+                    <div class="lesson-actions">
+                        <button type="button" id="complete" class="button button-primary">Marquer comme terminée</button>
+                        <nav aria-label="Navigation des leçons">
+                            <a id="previous" class="button button-outline">← Précédente</a>
+                            <a id="next" class="button button-outline">Suivante →</a>
+                        </nav>
+                    </div>
+                </article>
+                <aside>
+                    <section class="app-panel">
+                        <h2>Votre progression</h2>
+                        <p id="progress-label">
+                        </p>
+                        <progress id="progress" class="card-progress" aria-label="Progression du cours">
+                        </progress>
+                        <a class="button button-outline" href="dashboard.html">Mon tableau de bord</a>
+                    </section>
+                    <section class="app-panel">
+                        <h2>Conseil</h2>
+                        <p>Réalisez l’exercice avant de terminer chaque leçon. Revenez sur les notions difficiles à votre rythme.</p>
+                    </section>
+                    <section class="app-panel">
+                        <h2>Ressources utiles</h2>
+                        <a href="https://developer.mozilla.org/fr/docs/Learn_web_development" target="_blank" rel="noopener noreferrer">Documentation MDN</a>
+                        <p>Les exemples de code sont inclus dans les leçons.</p>
+                    </section>
+                </aside>
+            </div>
+            <noscript>Activez JavaScript pour consulter les leçons et sauvegarder votre progression.</noscript>
+        </main>
+        <footer class="app-footer">EduFlow · Apprenez à votre rythme · <a href="index.html">Accueil</a>
+        </footer>
+    </body>
+</html>

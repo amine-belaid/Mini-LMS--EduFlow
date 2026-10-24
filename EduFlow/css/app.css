@@ -1,0 +1,30 @@
+/* Éléments partagés par le catalogue, l'apprentissage et le tableau de bord. */
+[hidden] { display: none !important; }
+.header-actions { position: relative; }
+.notifications-panel { position: absolute; z-index: 20; top: 54px; right: 0; width: min(320px, calc(100vw - 32px)); padding: 20px; background: white; border: 1px solid var(--color-border); border-radius: 12px; box-shadow: 0 12px 30px #10234420; }
+.notifications-panel h2 { margin: 0 0 10px; font-size: 18px; }
+.notifications-panel p { margin: 0; color: var(--color-muted); }
+.app-container { width: min(1456px, calc(100% - 48px)); margin: 24px auto 48px; }
+.catalog-layout > *, .dashboard-layout > *, .learning-layout > * { min-width: 0; }
+.app-panel a { overflow-wrap: anywhere; }
+.app-status:empty { display: none; }
+.app-status { padding: 12px 16px; border-radius: 8px; background: var(--color-soft); color: var(--color-text); }
+.empty-state { grid-column: 1 / -1; padding: 32px; border: 1px dashed var(--color-border); border-radius: 12px; color: var(--color-muted); background: white; }
+.card-actions { display: grid; gap: 8px; margin-top: auto; padding-top: 14px; }
+.card-actions .button { width: 100%; font-size: 13px; }
+.card-progress { width: 100%; height: 10px; border: 0; border-radius: 8px; overflow: hidden; accent-color: var(--color-primary); background: var(--color-soft); }
+.card-progress::-webkit-progress-bar { background: var(--color-soft); }
+.card-progress::-webkit-progress-value { background: var(--color-primary); }
+.card-progress::-moz-progress-bar { background: var(--color-primary); }
+.card-progress-label { margin: 3px 0 14px; text-align: right; color: var(--color-muted); font-size: 12px; }
+.app-panel { padding: 22px; background: white; border: 1px solid var(--color-border); border-radius: 12px; box-shadow: 0 3px 10px #10234406; }
+.app-panel h2 { margin: 0 0 16px; font-size: 20px; }
+.app-panel p { color: var(--color-muted); }
+.app-banner { padding: 30px max(24px, calc((100% - 1420px) / 2)); background: linear-gradient(110deg, #f0f7ff, #e4f0ff); }
+.app-banner h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 44px); }
+.app-banner p { margin: 0; color: var(--color-muted); }
+.app-input { min-height: 44px; width: 100%; padding: 10px 12px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-background); color: var(--color-text); font: inherit; }
+.button:disabled { opacity: 0.55; cursor: not-allowed; }
+.app-footer { padding: 24px; text-align: center; color: var(--color-muted); border-top: 1px solid var(--color-border); font-size: 13px; }
+.app-footer a { margin-inline: 10px; }
+@media (max-width: 600px) { .app-container { width: calc(100% - 32px); margin-top: 16px; } .app-panel { padding: 16px; } }

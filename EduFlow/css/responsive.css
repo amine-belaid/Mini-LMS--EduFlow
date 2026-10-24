@@ -1,0 +1,196 @@
+/* L'en-tête passe sur plusieurs lignes lorsque la place manque. */
+@media (max-width: 1100px) {
+    .course-details-layout {
+        grid-template-columns: minmax(0, 1fr) 310px;
+        gap: 20px;
+    }
+
+    .course-overview {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .course-preview {
+        max-width: 533px;
+    }
+    .site-header {
+        flex-wrap: wrap;
+        gap: 12px 24px;
+        padding: 12px 24px;
+    }
+
+    .header-search {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Sur tablette, le texte et l'illustration occupent deux lignes. */
+@media (max-width: 900px) {
+    .course-details-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .course-details-sidebar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .course-details-sidebar .course-progress {
+        grid-column: 1 / -1;
+    }
+    .benefits-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .home-cta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 600px;
+        min-height: 0;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .course-details-page {
+        width: calc(100% - 32px);
+    }
+
+    .course-details-sidebar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .course-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .course-section-nav {
+        gap: 4px 16px;
+    }
+
+    .details-panel {
+        padding: 18px;
+    }
+
+    .overview-block {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .overview-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 26px;
+    }
+
+    .course-module summary span {
+        float: none;
+        display: block;
+        margin: 4px 0 0 18px;
+    }
+    .site-header {
+        gap: 12px 16px;
+        padding: 12px 16px;
+    }
+
+    .site-logo img {
+        width: 150px;
+    }
+
+    .main-nav {
+        order: 1;
+        width: 100%;
+    }
+
+    .nav-list {
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .nav-list a {
+        padding: 8px 0;
+    }
+
+    .header-search {
+        order: 2;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .hero {
+        gap: 24px;
+        width: calc(100% - 32px);
+        padding: 24px 16px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .hero-stats {
+        gap: 8px;
+    }
+
+    .hero-stat + .hero-stat {
+        padding-left: 8px;
+    }
+
+    /* Les encadrés retrouvent le flux normal pour ne pas cacher l'image. */
+    .hero-visual {
+        display: grid;
+        gap: 16px;
+        padding-left: 0;
+    }
+
+    .hero-caption,
+    .hero-features {
+        position: static;
+        max-width: none;
+    }
+
+    .popular-courses {
+        width: calc(100% - 32px);
+    }
+
+    .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .course-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .platform-benefits {
+        width: calc(100% - 32px);
+    }
+
+    .benefit-card {
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .home-cta {
+        padding: 28px 16px;
+    }
+
+    .home-cta > .button {
+        width: 100%;
+    }
+}
